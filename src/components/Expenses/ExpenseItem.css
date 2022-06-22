@@ -13,8 +13,8 @@
   gap: 1rem;
   align-items: flex-end;
   flex-flow: column-reverse;
-  justify-content: flex-start;
   flex: 1;
+  justify-content: flex-start;
 }
 
 .expense-item h2 {

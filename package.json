@@ -16,13 +16,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "push": "git add * && ipconfig"
+    "push": "git add * && set /p COM= && echo %COM% && git push origin main"
   },
-  "gitUpload": [
-    "git add *",
-    "git commit =m ''",
-    "git push"
-  ],
   "eslintConfig": {
     "extends": [
       "react-app",
