@@ -1,4 +1,5 @@
 git add *
-set /p COM=
-git commit -m '%COM%'
+set /p COM='Commit message: '
+git commit -m "%COM%"
 git push origin main
+exit
