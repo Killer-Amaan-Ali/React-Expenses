@@ -43,9 +43,6 @@ const App = () => {
 				onAddexpense={addExpenseHandler}
 				arrayLength={expenses.length}
 			/>
-			{expenses.map((i) => {
-				console.log(i.id)
-			})}
 			<Expenses items={expenses} />
 		</div>
 	)
