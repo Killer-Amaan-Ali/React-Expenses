@@ -1,3 +1,4 @@
+cls
 @echo off
 Color 0C
 title GitHub Pushing
