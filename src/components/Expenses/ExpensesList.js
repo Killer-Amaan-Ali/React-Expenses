@@ -15,9 +15,14 @@ const ExpensesList = (props) => {
 	// 	console.log(props.items[i].amount)
 	// 	num += props.items[i].amount
 	// }
+	function round(num) {
+		var m = Number((Math.abs(num) * 100).toPrecision(15))
+		return (Math.round(m) / 100) * Math.sign(num)
+	}
 	let num = 0
 	props.items.map((expense) => {
 		num += expense.amount
+		num = round(num)
 		return num
 	})
 
