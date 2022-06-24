@@ -13,7 +13,7 @@ Color 0A
 @echo ----
 setlocal
 :PROMPT
-SET /P EXIT=Exit? (Y/N)?
+SET /P EXIT=Exit? (Y/[N])?
 IF /I "%EXIT%" NEQ "Y" GOTO END
 
 exit
