@@ -10,7 +10,6 @@ const ExpensesList = (props) => {
 	// for (let i = 0; ++i; i < pooop?.length) {
 	// 	num += pooop[i]?.amount
 	// }
-	let num = 1
 
 	return (
 		<ul className='expenses-list'>
