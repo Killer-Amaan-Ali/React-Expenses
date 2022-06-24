@@ -7,18 +7,22 @@ git add *
 git commit -m "%COM%"
 git push origin main
 git status
-@echo ----
+@echo ----------------------------------------------------------------------------------------
 
 Color 0A
 @echo Pushed and Committed succesfully (%COM%)
 
-@echo ----
+@echo ----------------------------------------------------------------------------------------
 setlocal
 :PROMPT
 SET /P EXIT=Exit? (y/[n])
 IF /I "%EXIT%" NEQ "Y" GOTO END
 
 exit
+SET /P RETRY=Retry? (y/[n])
+IF /I "%RETRY%" NEQ "Y" GOTO END
+
+push
 
 
 :END
