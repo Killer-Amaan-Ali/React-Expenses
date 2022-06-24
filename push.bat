@@ -8,6 +8,5 @@ git commit -m "%COM%"
 git push origin main
 git status
 Color 0A
-@echo 
-@REM cls
+echo Line1◙Line2 >con
 @echo Pushed and Committed succesfully (%COM%)
