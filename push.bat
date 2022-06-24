@@ -1,5 +1,5 @@
 cls
-@REM @echo off
+@echo off
 Color 0C
 title GitHub Pushing
 set /p COM=Commit message: 
