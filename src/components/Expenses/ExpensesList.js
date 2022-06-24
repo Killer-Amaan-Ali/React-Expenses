@@ -7,14 +7,11 @@ const ExpensesList = (props) => {
 	// if (props.items.length === 0) {
 	// 	return <h2 className='expenses-list__fallback'>No Expenses Found</h2>
 	// }
-
-	let num = props?.items?.map((expense) => {
-		num += expense.amount
-	})
-	// let num = 0
-	// for (let i = 0; ++i; i < props?.items?.length) {
-	// 	num += props?.items[i]?.amount
+	// for (let i = 0; ++i; i < pooop?.length) {
+	// 	num += pooop[i]?.amount
 	// }
+	const pooop = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+	let num = 1
 
 	return (
 		<ul className='expenses-list'>
