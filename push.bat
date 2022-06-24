@@ -7,9 +7,9 @@ git add *
 git commit -m "%COM%"
 git push origin main
 git status
-Color 0A
 @echo ----
 
+Color 0A
 @echo Pushed and Committed succesfully (%COM%)
 
 @echo ----
