@@ -8,5 +8,5 @@ git commit -m "%COM%"
 git push origin main
 git status
 Color 0A
-echo Line1◙Line2 >con
+@echo first line&echo Second Line&echo Third line
 @echo Pushed and Committed succesfully (%COM%)
