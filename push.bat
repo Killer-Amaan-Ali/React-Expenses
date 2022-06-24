@@ -8,11 +8,12 @@ git commit -m "%COM%"
 git push origin main
 git status
 Color 0A
-@echo ----&echo ----&echo ----
+@echo ----
 @echo Pushed and Committed succesfully (%COM%)
+@echo ----
 setlocal
 :PROMPT
-SET /P EXIT=Exit? (Y/[N])?
+SET /P EXIT=Exit? (Y/N)?
 IF /I "%EXIT%" NEQ "Y" GOTO END
 
 exit
