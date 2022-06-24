@@ -7,9 +7,19 @@ const ExpensesList = (props) => {
 	// if (props.items.length === 0) {
 	// 	return <h2 className='expenses-list__fallback'>No Expenses Found</h2>
 	// }
-	// for (let i = 0; ++i; i < pooop?.length) {
-	// 	num += pooop[i]?.amount
+	// num = props.items.map((expense) => {
+	// 	return (num += expense.amount)
+	// })
+
+	// for (let i = 0; i < props.items.length; i++) {
+	// 	console.log(props.items[i].amount)
+	// 	num += props.items[i].amount
 	// }
+	let num = 0
+	props.items.map((expense) => {
+		num += expense.amount
+		return num
+	})
 
 	return (
 		<ul className='expenses-list'>
@@ -28,7 +38,7 @@ const ExpensesList = (props) => {
 				<Card className='expense-item'>
 					<div className='expense-item__description'>
 						<h2>Total</h2>
-						<div className='expense-item__price'>₹ num</div>
+						<div className='expense-item__price'>₹ {num}</div>
 					</div>
 				</Card>
 			)}
