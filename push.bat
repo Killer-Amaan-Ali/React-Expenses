@@ -9,5 +9,5 @@ git push origin main
 git status
 Color 0A
 @echo "`n"
-cls
-@echo Pushed and Committed succesfully
+@REM cls
+@echo Pushed and Committed succesfully (%COM%)
