@@ -16,14 +16,14 @@ Color 0A
 setlocal
 :PROMPT
 SET /P EXIT=Exit? (y/[n])
-IF /I "%EXIT%" NEQ "Y" GOTO END
+IF /I "%EXIT%" NEQ "Y" GOTO EEND
 
 exit
-:END
+:EEND
 SET /P RETRY=Retry? (y/[n])
-IF /I "%RETRY%" NEQ "Y" GOTO END
-
+IF /I "%RETRY%" NEQ "Y" GOTO REND
 push
+:REND
 
 
 endlocal
