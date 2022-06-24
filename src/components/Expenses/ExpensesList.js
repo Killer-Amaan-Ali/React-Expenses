@@ -10,7 +10,6 @@ const ExpensesList = (props) => {
 	// for (let i = 0; ++i; i < pooop?.length) {
 	// 	num += pooop[i]?.amount
 	// }
-	const pooop = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 	let num = 1
 
 	return (
@@ -30,7 +29,7 @@ const ExpensesList = (props) => {
 				<Card className='expense-item'>
 					<div className='expense-item__description'>
 						<h2>Total</h2>
-						<div className='expense-item__price'>₹ {num}</div>
+						<div className='expense-item__price'>₹ num</div>
 					</div>
 				</Card>
 			)}
