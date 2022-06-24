@@ -19,11 +19,11 @@ SET /P EXIT=Exit? (y/[n])
 IF /I "%EXIT%" NEQ "Y" GOTO END
 
 exit
+:END
 SET /P RETRY=Retry? (y/[n])
 IF /I "%RETRY%" NEQ "Y" GOTO END
 
 push
 
 
-:END
 endlocal
