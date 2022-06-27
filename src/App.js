@@ -33,11 +33,12 @@ const App = () => {
 	const [expenses, setExpenses] = useState(DUMMY)
 	const addExpenseHandler = (expense) => {
 		// console.log(expense)
-		localStorage.setItem(expense.id, [
-			expense.title,
-			expense.date,
-			expense.amount,
-		])
+		// localStorage.setItem()
+		// localStorage.setItem(expense.id, [
+		// 	`title: ${expense.title}`,
+		// 	`amount: ${expense.amount}`,
+		// 	`date: ${expense.date}`,
+		// ])
 		setExpenses((previousExpenses) => {
 			return [expense, ...previousExpenses]
 		})
