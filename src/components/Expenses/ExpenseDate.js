@@ -7,9 +7,9 @@ const ExpenseDate = (props) => {
 	const day = props.date.toLocaleString('en-US', { day: '2-digit' })
 	const year = props.date.getFullYear()
 
-	console.log('🚀 ~ file: ExpenseDate.js ~ line 9 ~ ExpenseDate ~ day', day)
-	console.log('🚀 ~ file: ExpenseDate.js ~ line 7 ~ ExpenseDate ~ month', month)
-	console.log('🚀 ~ file: ExpenseDate.js ~ line 11 ~ ExpenseDate ~ year', year)
+	// console.log('🚀 ~ file: ExpenseDate.js ~ line 9 ~ ExpenseDate ~ day', day)
+	// console.log('🚀 ~ file: ExpenseDate.js ~ line 7 ~ ExpenseDate ~ month', month)
+	// console.log('🚀 ~ file: ExpenseDate.js ~ line 11 ~ ExpenseDate ~ year', year)
 
 	return (
 		<div className='expense-date'>

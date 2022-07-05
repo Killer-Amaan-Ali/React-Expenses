@@ -3,6 +3,10 @@ import NewExpense from './components/NewExpense/NewExpense'
 import Expenses from './components/Expenses/Expenses'
 
 let DUMMY = []
+console.log(
+	"🚀 ~ file: App.js ~ line 8 ~ JSON.parse(localStorage.getItem('data'))",
+	JSON.parse(localStorage.getItem('data'))
+)
 DUMMY =
 	// JSON.parse(localStorage.getItem('data')) ||
 	[
@@ -32,6 +36,7 @@ DUMMY =
 			date: new Date(2022, 5, 12),
 		},
 	]
+localStorage.setItem('DUMMY', JSON.stringify(DUMMY))
 const App = () => {
 	const [expenses, setExpenses] = useState(DUMMY)
 	const addExpenseHandler = (expense) => {
