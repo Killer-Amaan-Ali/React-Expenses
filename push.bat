@@ -5,7 +5,7 @@ title GitHub Pushing
 set /p COM=Commit message: 
 git add *
 git commit -m "%COM%"
-git pull origin main
+@REM git pull origin main
 git push origin main
 git status
 @echo ----------------------------------------------------------------------------------------

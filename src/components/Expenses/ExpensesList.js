@@ -25,6 +25,10 @@ const ExpensesList = (props) => {
 		num = round(num)
 		return num
 	})
+	console.log(
+		'🚀 ~ file: ExpensesList.js ~ line 28 ~ props.items.map ~ props.items',
+		props.items
+	)
 
 	return (
 		<ul className='expenses-list'>
