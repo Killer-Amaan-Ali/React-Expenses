@@ -49,8 +49,8 @@ const products = [
 	},
 	{
 		value: 'saltedChips',
-		price: 10,
-		name: 'Salted Chips'
+		name: 'Salted Chips',
+		price: 10
 	}
 ]
 DUMMY = (JSON.parse(localStorage.getItem('data')) || []).map(d => {
