@@ -5,20 +5,25 @@ const ExpenseForm = (props) => {
 	const [enteredAmount, setEnteredAmount] = useState('')
 	const [enteredDate, setEnteredDate] = useState('')
 
-	const titleChangeHandler = (event) => {
+	const titleChangeHandler = event => {
 		setEnteredTitle(event.target.value)
 		// console.log(event.target.value)
 	}
-	const amountChangeHandler = (event) => {
+	const amountChangeHandler = event => {
 		setEnteredAmount(event.target.value)
 		// console.log(event.target.value)
 	}
-	const dateChangeHandler = (event) => {
+	const dateChangeHandler = event => {
 		setEnteredDate(event.target.value)
-		// console.log(event.target.value)
 	}
 
-	const submitHandler = (event) => {
+	const productDropHandler = event => {
+		const selectedProduct = props.products.find(e => e.value === event.target.value)
+		setEnteredTitle(selectedProduct?.name || '')
+		setEnteredAmount(selectedProduct?.price || '')
+	}
+
+	const submitHandler = event => {
 		event.preventDefault()
 
 		const expenseData = {
@@ -43,6 +48,12 @@ const ExpenseForm = (props) => {
 						onChange={titleChangeHandler}
 						required={true}
 					/>
+					<select onChange={productDropHandler}>
+						<option value=''>Select</option>
+						{props?.products.map((d, i) => {
+							return <option key={i} value={d?.value}>{d?.name}</option>
+						})}
+					</select>
 				</div>
 				<div className='new-expense__control'>
 					<label>Amount</label>
@@ -61,9 +72,11 @@ const ExpenseForm = (props) => {
 						type='date'
 						value={enteredDate}
 						onChange={dateChangeHandler}
+						// placeholder="YYYY-MM-DD"
+						// pattern="\d{4}-\d{2}-\d{2}"
 						required={true}
-						min='2017-01-01'
-						max='2022-12-31'
+						min='2020-01-01'
+						max='2030-12-31'
 					/>
 				</div>
 			</div>

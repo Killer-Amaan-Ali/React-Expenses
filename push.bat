@@ -5,8 +5,9 @@ title GitHub Pushing
 set /p COM=Commit message: 
 git add *
 git commit -m "%COM%"
-@REM git pull origin main
+git pull origin main
 git push origin main
+@echo ----------------------------------------------------------------------------------------
 git status
 @echo ----------------------------------------------------------------------------------------
 
@@ -16,15 +17,12 @@ Color 0A
 @echo ----------------------------------------------------------------------------------------
 setlocal
 :PROMPT
-SET /P EXIT=Exit? (y/[n])
+SET /P EXIT=Exit? (y/n)
 IF /I "%EXIT%" NEQ "Y" GOTO EEND
 
 exit
 :EEND
-SET /P RETRY=Retry? (y/[n])
-IF /I "%RETRY%" NEQ "Y" GOTO REND
 push
-:REND
 
 
 endlocal

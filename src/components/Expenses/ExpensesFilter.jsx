@@ -3,7 +3,7 @@ import React from 'react'
 import './ExpensesFilter.css'
 
 const ExpensesFilter = (props) => {
-	const years = ['All', 2017, 2018, 2019, 2020, 2021, 2022]
+	const years = props.years
 	const dropdownChangeHandler = (event) => {
 		// console.log(event.target.value)
 		props.onChangeFilter(event.target.value)
