@@ -70,6 +70,10 @@ const NewExpense = (props) => {
 					/>
 				)}
 			</div>
+			<button onClick={() => {
+				localStorage.clear()
+				window.location.reload()
+			}}>Delete everything!</button>
 		</div>
 	)
 }

@@ -63,6 +63,26 @@ DUMMY = (JSON.parse(localStorage.getItem('data')) || []).map(d => {
 localStorage.setItem('DUMMY', JSON.stringify(DUMMY))
 const App = () => {
 	const [expenses, setExpenses] = useState(DUMMY)
+	const mode =
+		'month'
+		// 'year'
+	const years = ['All', 2022, 2023]
+	const months = [
+		'All',
+		'Jan',
+		'Feb',
+		'Mar',
+		'Apr',
+		'May',
+		'Jun',
+		'Jul',
+		'Aug',
+		'Sep',
+		'Oct',
+		'Nov',
+		'Dec'
+	]
+
 	const addExpenseHandler = expense => {
 		setExpenses(previousExpenses => {
 			localStorage.setItem(
@@ -72,7 +92,7 @@ const App = () => {
 			return [expense, ...previousExpenses]
 		})
 	}
-	const years = ['All', 2022, 2023]
+
 	return (
 		<div>
 			<NewExpense
@@ -80,7 +100,7 @@ const App = () => {
 				onAddexpense={addExpenseHandler}
 				arrayLength={expenses.length}
 			/>
-			<Expenses years={years} items={expenses} />
+			<Expenses filter={mode === 'month' ? months : years} items={expenses} mode={mode} />
 		</div>
 	)
 }

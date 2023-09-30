@@ -6,31 +6,30 @@ import './Expenses.css'
 import ExpensesList from './ExpensesList'
 import ExpensesChart from './ExpensesChart'
 const Expenses = props => {
-	const [filteredYear, setFilteredYear] = useState('All')
+	const [filteredUnit, setFilteredUnit] = useState(props.mode === 'month' ? props.filter[new Date().getMonth() + 1] : 'All')
+
 	const filterChangeHandler = (selectedYear) => {
-		// console.log(selectedYear)
-		setFilteredYear(selectedYear)
+		setFilteredUnit(selectedYear)
 	}
 	const filteredExpenses = props.items.filter((expense) => {
-		if (filteredYear === 'All') {
-			return filteredYear
+		if (filteredUnit === 'All') {
+			return filteredUnit
 		} else {
-			return expense.date.getFullYear().toString() === filteredYear
+			return props.mode === 'month'
+				? props.filter[expense.date.getMonth() + 1] === filteredUnit
+				: expense.date.getFullYear().toString() === filteredUnit
 		}
 	})
-	// console.log(
-	// 	'🚀 ~ file: Expenses.js ~ line 15 ~ filteredExpenses ~ props.items',
-	// 	props.items
-	// )
 
 	return (
 		<Card className='expenses'>
 			<ExpensesFilter
-				years={props.years}
+				filter={props.filter}
 				onChangeFilter={filterChangeHandler}
-				selected={filteredYear}
+				selected={filteredUnit}
+				mode={props.mode}
 			/>
-			<ExpensesChart expenses={filteredExpenses} />
+			<ExpensesChart mode={props.mode} expenses={filteredExpenses} />
 			<ExpensesList items={filteredExpenses} />
 		</Card>
 	)

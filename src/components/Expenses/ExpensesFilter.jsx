@@ -1,19 +1,18 @@
 import React from 'react'
-
 import './ExpensesFilter.css'
 
+
 const ExpensesFilter = (props) => {
-	const years = props.years
+	const filter = props.filter
 	const dropdownChangeHandler = (event) => {
-		// console.log(event.target.value)
 		props.onChangeFilter(event.target.value)
 	}
 	return (
 		<div className='expenses-filter'>
 			<div className='expenses-filter__control'>
-				<label>Filter by year</label>
+				<label>Filter by {props.mode}</label>
 				<select onChange={dropdownChangeHandler} value={props.selected}>
-					{years.map((value, key) => {
+					{filter.map((value, key) => {
 						return (
 							<option key={key} value={value}>
 								{value}
