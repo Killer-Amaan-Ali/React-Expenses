@@ -4,6 +4,10 @@
   flex-direction: column;
   align-items: center;
   min-width: .5rem;
+  display: flex;
+  flex: auto;
+  max-width: 0.7rem;
+  margin: 0 7px;
 }
 
 .chart-bar__inner {

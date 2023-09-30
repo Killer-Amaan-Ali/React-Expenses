@@ -3,7 +3,8 @@
   border-radius: 12px;
   background-color: #f8dfff;
   text-align: center;
+  overflow: auto;
   display: flex;
-  justify-content: space-around;
+  /* justify-content: space-around; */
   height: 10rem;
 }
