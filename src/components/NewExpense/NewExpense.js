@@ -46,7 +46,7 @@ const NewExpense = (props) => {
 		<div className='new-expense'>
 			<div className='new-expense-wrapper' style={{ width: isEditing ? '100%' : 'auto' }}>
 				{(!budgetEditing && !isEditing) && (
-					<button onClick={startEditingHandler}>Add New Expense</button>
+					<button onClick={startEditingHandler}>Add New Expenses</button>
 				)}
 				{isEditing && (
 					<ExpenseForm
